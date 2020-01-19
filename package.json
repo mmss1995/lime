@@ -1,0 +1,19 @@
+{
+    "name": "lime",
+    "description": "A theme for GhostJS",
+    "version": "0.0.1",
+    "engines": {
+        "ghost": ">=1.0.0",
+        "ghost-api": "v3"
+    },
+    "author": {
+        "email": "matteo.sausto@outlook.it",
+        "name": "Matteo Sausto"
+    },
+    "config": {
+        "posts_per_page": 5
+    },
+    "keywords": [
+        "ghost-theme"
+    ]
+}

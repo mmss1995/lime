@@ -1,0 +1,34 @@
+<footer class="footer is-centered">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                {{#get "posts" limit="3" as |recent|}}
+                <section class="ricent-post">
+                    <h3>Recent post</h3>
+                    <ul>
+                        {{#foreach recent}}
+                        <li>
+                            <a href="{{url}}">{{title}}</a>
+                        </li>
+                        {{/foreach}}
+                    </ul>
+                </section>
+                {{/get}}
+            </div>
+            <div class="column">
+                {{#get "tags" limit="10" as |tag|}}
+                <section>  
+                    <h3>Tags</h3>
+                    <ul>
+                        {{#foreach tag}}
+                        <li>
+                            <a href="{{url}}" class="tag">{{name}}</a>
+                        </li>
+                        {{/foreach}}
+                    </ul>
+                </section>
+                {{/get}}
+            </div>
+        </div>
+    </div>
+</footer>

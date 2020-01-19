@@ -1,0 +1,39 @@
+<article class="card">
+    {{#if feature_image}}
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="{{feature_image}}" alt="{{title}}">
+        </figure>
+    </div>
+    {{/if}}
+    <div class="card-content">
+        {{#primary_author}}
+            {{#if profile_image}}
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img src="{{profile_image}}" alt="{{name}}">
+                        </figure>
+                    </div>
+                </div>
+            {{/if}}
+        <a class="title is-4" href="{{url}}">
+            {{title}}
+        </a>
+        <div class="content">
+            <p>
+                {{#if meta_description}}
+                {{meta_description}}
+                {{else}}
+                {{excerpt word="40"}}...
+                {{/if}}
+            </p>
+            <p>
+                {{name}} in {{tags}} on
+
+                <time>{{date}}</time>
+            </p>
+        </div>
+        {{/primary_author}}
+    </div>
+</article>
