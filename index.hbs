@@ -1,4 +1,14 @@
 {{!< default}}
+
+<div class="carousel slide" data-ride="carousel" id="carousel">
+        <div class="carousel-inner">
+            {{#foreach posts}}
+            <div class="carousel-item {{#if @first}} active{{/if}}">
+                <div class="hero d-block w-100" style="background: linear-gradient(transparent, transparent, #f7f7f761, #f5f0de), url({{feature_image}});"></div>
+            </div>
+            {{/foreach}}
+        </div>
+    </div>
 <div class="container text-center" id="main-content">
     <div id="recipe">
         <div class="title">
