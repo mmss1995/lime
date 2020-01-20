@@ -1,34 +1,17 @@
-<footer class="footer is-centered">
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                {{#get "posts" limit="3" as |recent|}}
-                <section class="ricent-post">
-                    <h3>Recent post</h3>
-                    <ul>
-                        {{#foreach recent}}
-                        <li>
-                            <a href="{{url}}">{{title}}</a>
-                        </li>
-                        {{/foreach}}
-                    </ul>
-                </section>
-                {{/get}}
+<footer class="page-footer font-small pt-4 pb-0">
+    <div class="container-fluid text-center text-md-left">
+        <div class="row">
+            <div class="col-md mt-md-0 mt-3 text-center text-white">
+                <h5>Dolci da Matti | Home Made Sweets</h5>
+                <img src="img/logo.png" alt="DolciDaMatti" style="max-height: 65px;" />
             </div>
-            <div class="column">
-                {{#get "tags" limit="10" as |tag|}}
-                <section>  
-                    <h3>Tags</h3>
-                    <ul>
-                        {{#foreach tag}}
-                        <li>
-                            <a href="{{url}}" class="tag">{{name}}</a>
-                        </li>
-                        {{/foreach}}
-                    </ul>
-                </section>
-                {{/get}}
+            <div class="col-md mb-md-0 mt-3 text-center text-white">
+                <h5>Social</h5>
+                <a href="" target="_blank"><img class="social-img" src="img/social/instagram.svg" /></a>
+                <a href="" target="_blank"><img class="social-img" src="img/social/facebook.svg" /></a>
+                <a href="" target="_blank"><img class="social-img" src="img/social/twitter.svg" /></a>
             </div>
         </div>
     </div>
+    <div class="footer-copyright text-center"> Copyright © 2019 Dolci da Matti</div>
 </footer>
