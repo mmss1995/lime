@@ -1,17 +1,21 @@
 {{!< default}}
-
-<main class="container">
-    <div class="columns is-multiline">
-        {{#foreach posts}}
-        <div class="column is-half is-centered">
+<div class="container text-center" id="main-content">
+    <div id="recipe">
+        <div class="title">
+            <h1 class="text-uppercase">ultime ricette</h1>
         </div>
-        {{> post_card}}
-        {{/foreach}}
+        <div class="row">
+            {{#foreach posts}}
+            <div class="col-md m-3 p-2">
+                {{> post_card}}
+            </div>
+            {{/foreach}}
+        </div>
     </div>
-</main>
+</div>
 
 <!-- Pagination-->
 <div class="container">
-{{pagination}}
+    {{pagination}}
 
 </div>
