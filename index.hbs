@@ -33,12 +33,13 @@
         {{pagination}}
 
     </div> --}}
-
+    {{#get "posts" filter="tags:eccoci"}}
+    {{#if posts}}
     <div id="who_we_are" class="p-3 m-3">
         <div class="title">
             <h1 class="text-uppercase">eccoci</h1>
         </div>
-        {{#get "posts" filter="tags:eccoci"}}
+
         {{#foreach posts}}
         <div class="row">
             <div class="col-lg-6 d-block pt-3 pb-3">
@@ -51,6 +52,7 @@
             </div>
         </div>
         {{/foreach}}
-        {{/get}}
     </div>
+    {{/if}}
+    {{/get}}
 </div>
