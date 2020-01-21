@@ -1,12 +1,19 @@
-<nav class="pagination is-medium" role="navigation" aria-label="pagination">
+<nav class="pagination text-center" role="navigation" aria-label="pagination">
     {{#if prev}}
-        <a href="{{page_url prev}}" class="pagination-next">Newer Posts</a>
+        <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+ 
     {{/if}}
-    <span class="pagination-link is-current">
+    <span class="page-item">
         Page {{page}} of {{pages}}
     </span>
 
     {{#if next}}
-        <a href="{{page_url next}}" class="pagination-previous">Older Posts</a>
+        <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
     {{/if}}
 </nav>
