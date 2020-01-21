@@ -15,8 +15,7 @@
       <h1 class="text-uppercase">{{title}}
       </h1>
     </div>
-    <div class="row">
-
+    <div class="row">       
       <div class="col-lg m-3 p-3 d-block">
         <p class="text-break text-left center-align w-100 position-relative center-align">
           {{#if description}}
@@ -31,7 +30,9 @@
       </div>
     </div>
   </a>
-
+  
+  {{#if @first}}
   <div class="separator"></div>
+  {{/if}}
 </div>
 {{/foreach}}
