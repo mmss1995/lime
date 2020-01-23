@@ -1,19 +1,23 @@
 <nav class="pagination text-center" role="navigation" aria-label="pagination">
-    {{#if prev}}
-        <a class="page-link" href="#" aria-label="Previous">
+  <ul class="pagination w-100">
+    <li class="page-item {{#unless prev}} disabled {{/unless}} col-2">
+      <a class="page-link" href="#" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
         <span class="sr-only">Previous</span>
       </a>
- 
-    {{/if}}
-    <span class="page-item">
-        Page {{page}} of {{pages}}
-    </span>
+    </li>
 
-    {{#if next}}
-        <a class="page-link" href="#" aria-label="Next">
+    <li class="page-item col">
+      <span class="page-item">
+        Page {{page}} of {{pages}}
+      </span>
+    </li>
+
+    <li class="page-item {{#unless next}} disabled {{/unless}} col-2">
+      <a class="page-link" href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
         <span class="sr-only">Next</span>
       </a>
-    {{/if}}
+    </li>
+  </ul>
 </nav>
